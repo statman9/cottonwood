@@ -24,8 +24,8 @@
                         Options <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li>{{#link-to "details" {query-params id=post.id}}}Details{{/link-to}}</li>
-                        <li>{{#link-to "edit" {query-params id=post.id}}}Edit{{/link-to}}</li>
+                        <li>{{#link-to "details" (query-params id=post.id)}}Details{{/link-to}}</li>
+                        <li>{{#link-to "edit" (query-params id=post.id)}}Edit{{/link-to}}</li>
                         <li><a href="#" onclick={{action "deletePost" post.id}}>Delete</a></li>
                     </ul>
                 </div>
