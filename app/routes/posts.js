@@ -3,9 +3,10 @@ import $ from 'jquery';
 import Ember from 'ember';
 
 export default Route.extend({
-    model() {
-        Ember.$.getJSON("http://159.89.148.4:8081/posts", (err, data) => {
-            return data;
+    ajax: Ember.inject.service(),
+    model: function() {
+        this.get('ajax').get("http://159.89.148.4:8081/posts").then((response) => {
+            return response;
         });
     }
 });
