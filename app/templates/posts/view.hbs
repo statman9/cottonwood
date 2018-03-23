@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="/posts/details/{{post.id}}">Details</a></li>
                         <li><a href="/posts/edit/{{post.id}}">Edit</a></li>
-                        <li><a href="#" onclick={{action "deletePost" post.id}}>Delete</a></li>
+                        <li><a href="#" onclick="deletePost({{post.id}})">Delete</a></li>
                     </ul>
                 </div>
             </td>

@@ -8,11 +8,9 @@ export default Route.extend({
             method: 'GET'
         });
     },
-    actions: {
-        deletePost(id) {
-            return this.get('ajax').request("http://159.89.148.4:8081/posts/" + id, {
-                method: "DELETE"
-            });
-        }
+    deletePost(id) {
+        return this.get('ajax').request("http://159.89.148.4:8081/posts/" + id, {
+            method: "DELETE"
+        });
     }
 });
