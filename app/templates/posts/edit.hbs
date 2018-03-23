@@ -3,25 +3,25 @@
 <form method="put" action="http://159.89.148.4:8081/models/{{model.id}}">
     <div class="col-sm-12">
         <label class="col-sm-3" for="id">ID</label>
-        <input type="text" name="id" value="{{model.id}}" class="form-control col-sm-9" disabled />
+        {{input type="text" name="id" value=model.id class="form-control col-sm-9" disabled="entryNotAllowed"}}
     </div>
     <div class="col-sm-12">
         <label class="col-sm-3" for="title">Title</label>
-        <input type="text" name="title" class="form-control col-sm-9" value="{{model.title}}" />
+        {{input type="text" name="title" class="form-control col-sm-9" value=model.title}}
     </div>
     <div class="col-sm-12">
         <label class="col-sm-3" for="content">Content</label>
-        <textarea name="content" class="form-control col-sm-9">{{model.content}}</textarea>
+        {{textarea name="content" class="form-control col-sm-9" value=model.content}}
     </div>
     <div class="col-sm-12" style="display: none;">
         <label class="col-sm-3" for="create_date">Create Date</label>
-        <input name="create_date" value="{{model.create_date}}" class="form-control col-sm-9" />
+        {{input name="create_date" value=model.create_date class="form-control col-sm-9"}}
     </div>
     <div class="col-sm-12" style="display: none;">
         <label class="col-sm-3" for="update_date">Update Date</label>
-        <input type="text" name="updated_date" value="now()" class="form-control col-sm-9" />
+        {{input type="text" name="updated_date" value="now()" class="form-control col-sm-9"}}
     </div>
     <div class="col-sm-12">
-        <input type="submit" class="btn btn-success" value="Create" />
+        <input type="submit" class="btn btn-success" value="Save" />
     </div>
 </form>
