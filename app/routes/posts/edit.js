@@ -7,8 +7,7 @@ export default Route.extend({
     },
     id: null,
     ajax: Ember.inject.service(),
-    model(params) {
-        var param = this.store.query('edit', params);
+    model() {
         return this.get('ajax').request("http://159.89.148.4:8081/posts/" + id, {
             method: 'GET'
         });
