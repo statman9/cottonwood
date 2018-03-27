@@ -1,6 +1,6 @@
 <h2>Create a Post</h2>
 
-<form method="post" action="http://159.89.148.4:8081/posts">
+<form method="post" action="http://159.89.148.4:8081/posts" id="newForm">
     <div class="col-sm-12" style="display: none;">
         <label class="col-sm-3" for="id">ID</label>
         <input type="text" name="id" value="UUID()" class="form-control col-sm-9" />
@@ -13,11 +13,7 @@
         <label class="col-sm-3" for="content">Content</label>
         <textarea name="content" class="form-control col-sm-9"></textarea>
     </div>
-    <div class="col-sm-12" style="display: none;">
-        <label class="col-sm-3" for="created_at">Create Date</label>
-        <input name="created_at" value="now()" class="form-control col-sm-9" />
-    </div>
     <div class="col-sm-12">
-        <input type="submit" class="btn btn-success" value="Create" />
+        <input type="button" class="btn btn-success" value="Create" />
     </div>
 </form>
